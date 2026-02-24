@@ -1,7 +1,11 @@
+import Navbar from "../components/Navbar";
+import Herosection from "./Herosection";
+
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to Pontis</h1>
+      <Navbar/>
+      <Herosection/>
     </div>
   );
 };
