@@ -1,12 +1,16 @@
+/* ================= NAVBAR ================= */
 
 .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 28px 0;
+  height: 100px;
+  background: transparent;
+  z-index: 1000;
 
-  background-image: url("../assets/hero-section-bg-nav.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-container {
@@ -19,12 +23,18 @@
   justify-content: space-between;
 }
 
-/* Logo */
+
+/* ================= LOGO ================= */
+
 .logo img {
-  height: 45px;
+  height: 100px;
+  width: auto;
+  max-height: 110px;
 }
 
-/* Nav Links */
+
+/* ================= NAV LINKS ================= */
+
 .nav-links {
   display: flex;
   gap: 40px;
@@ -32,23 +42,34 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #111;
+  color: #000000;
   font-size: 18px;
   font-weight: 500;
+  font-family: "Gantari", sans-serif;
+  line-height: 100%;
   position: relative;
 }
 
-.nav-links a.active::after {
+/* animated underline */
+.nav-links a::after {
   content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 2px;
-  background-color: #111;
+  background: linear-gradient(to right, #182CCB, #E40209, #DFEDFF);
+  transition: width 0.3s ease;
 }
 
-/* Right Section */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+/* ================= RIGHT ACTIONS ================= */
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -57,22 +78,32 @@
 
 .signin {
   text-decoration: none;
+  font-family: "Gantari", sans-serif;
+  font-weight: 600;
   font-size: 18px;
-  color: #3f2dbf; /* purple tone */
-  font-weight: 500;
+
+  background: linear-gradient(90deg, #182CCB, #7E176A, #E40209);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .get-started {
-  background-color: #e50914;
+  width: 195px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #E40209;
   color: #fff;
   border: none;
-  padding: 14px 28px;
-  border-radius: 10px;
+
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
   font-size: 18px;
-  font-weight: 600;
+
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -83,4 +114,100 @@
 
 .arrow {
   font-size: 14px;
+}
+
+
+/* ================= HAMBURGER ================= */
+
+.nav-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+
+/* ================= MOBILE ACTIONS (INSIDE MENU) ================= */
+
+.mobile-actions {
+  display: none;
+}
+
+
+/* ================= LARGE TABLET ADJUSTMENT ================= */
+
+@media (max-width: 1200px) {
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+
+}
+
+
+/* ================= TABLET + MOBILE ================= */
+
+@media (max-width: 992px) {
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+
+    padding: 20px 0;
+    gap: 20px;
+
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  /* mobile buttons visible */
+  .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 576px) {
+
+  .navbar {
+    height: 80px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .nav-links {
+    top: 80px;
+  }
+
 }

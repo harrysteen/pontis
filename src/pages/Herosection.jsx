@@ -9,6 +9,18 @@ import mentorBg from "../assets/Customized-Mentorship-BG.webp";
 import powerskillperson from "../assets/Power-Skills-preson.webp";
 import powerskillbg from "../assets/Power-Skills-BG.webp";
 
+
+/* --- third Slide Images --- */
+import Professionalpreson from "../assets/Professionalpreson.webp";
+import ProfessionalB from "../assets/ProfessionalBG.webp";
+
+
+
+/* --- fourth Slide Images --- */
+import Careerpreson from "../assets/Careerperson.webp";
+import CareerBG from "../assets/CareerBG.webp";
+ 
+
 /* --- Background Image (if using) --- */
 import bgImage from "../assets/hero-section-bg-nav.webp";
 
@@ -25,6 +37,18 @@ const Herosection = () => {
       person: powerskillperson,
       bg: powerskillbg,
     },
+
+    {
+
+      title: "Professional readiness training",
+      person: Professionalpreson,
+      bg: ProfessionalB,
+    },
+    {
+      title: "Career confidence & communication",
+      person: Careerpreson,
+      bg: CareerBG,
+    }
   ];
 
   const [index, setIndex] = useState(0);
