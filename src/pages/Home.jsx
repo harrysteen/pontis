@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Herosection from "./Herosection";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import Testmonials from "./Testmonials";
  
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Herosection/>
       <Section2/>
       <Section3/>
+      <Testmonials/>
       <Footer/>
 
     </div>

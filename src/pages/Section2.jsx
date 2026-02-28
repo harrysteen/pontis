@@ -6,9 +6,9 @@ import img2 from "../assets/section-2-img2.jpg";
 import img3 from "../assets/section2-img3.jpg";
 import img4 from "../assets/studentswalking.jpg";
 
-const Section2 = () => {
+const Section2 = () => {  
   return (
-    <section className="section2">
+    <section className="section2"  id="aboutt">
 
 
 

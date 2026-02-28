@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { FaArrowRight, FaBars, FaTimes } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import pontislogo from "../assets/pontis-Logo.png";
- import Contact from "../components/Contact";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,13 +25,40 @@ const Navbar = () => {
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
-        {/* Nav Links */}
+        {/* Nav Links */}   
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
-          <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-          <NavLink to="/services" onClick={() => setMenuOpen(false)}>Services</NavLink>
-          <NavLink to="/mentor" onClick={() => setMenuOpen(false)}>Mentor</NavLink>
-          <NavLink to="/testimonials" onClick={() => setMenuOpen(false)}>Testimonials</NavLink>
+            {/* existing pages use NavLink so react-router can highlight the active link */}
+            <NavLink to="/" end onClick={() => setMenuOpen(false)}>Home</NavLink>
+             
+
+            {/* temporary anchors for sections that live on the home page
+              the app currently doesn't have dedicated routes for these yet,
+              so the links simply jump back to the appropriate section on
+              the single‑page home layout */}
+                       <HashLink smooth to="/#aboutt" onClick={() => setMenuOpen(false)}>
+About
+</HashLink>
+
+
+
+              <HashLink smooth to="/#services" onClick={() => setMenuOpen(false)}>
+  Services
+</HashLink>
+
+
+<HashLink smooth to="/#mentorr" onClick={() => setMenuOpen(false)}>
+  Mentor 
+</HashLink>
+
+<HashLink smooth to="/#test-mode" onClick={() => setMenuOpen(false)}>
+Testmonial
+</HashLink>
+
+ 
+
+
+          
+            {/* <a href="/#testmoniall" onClick={() => setMenuOpen(false)}>Testimonials</a> */}
 
           {/* ✅ MOBILE ONLY ACTIONS */}
           <div className="mobile-actions">

@@ -1,0 +1,178 @@
+ 
+
+.testmonials-container {
+   position: relative;
+  background: #ffffff;
+     padding: 10px 80px;
+  overflow: hidden;
+  font-family: 'Mada', sans-serif;
+ 
+}
+
+/* Heading */
+.testmonials-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+
+.testmonials-heading h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+  
+}
+
+.red-dot {
+  width: 10px;
+  height: 10px;
+    background: linear-gradient(90deg,#3f51ff,#ff1e5a);
+  border-radius: 50%;
+}
+
+/* Cards */
+.testmonials-cards {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 80px;
+}
+
+.testmonial-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  height: 520px;              /* important for bottom alignment */
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   /* pushes bottom content down */
+}
+
+.testmonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testmonial-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #000000E5;
+  font-weight: 400px;
+
+  text-align: center;      /* center text */
+  flex-grow: 1;            /* takes available space */
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+}
+
+.testmonial-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  text-align: left;
+  color: #000000E5;
+}
+
+.testmonial-card span {
+  font-size: 13px;
+  color: #777;
+  text-align: left;
+}
+
+/* Bridge */
+.bridge-wrapper {
+  width: 100%;
+}
+
+.bridge-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+
+
+
+
+
+@media (max-width: 1200px) {
+
+  .testmonials-container {
+    padding: 10px 50px;
+  }
+
+  .testmonials-cards {
+    gap: 60px;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+
+  .testmonials-container {
+    padding: 10px 40px;
+  }
+
+  .testmonials-cards {
+    flex-wrap: wrap;       /* allow wrapping */
+    gap: 40px;
+  }
+
+  .testmonial-card {
+    width: 45%;            /* 2 cards per row */
+    height: auto;          /* remove fixed height */
+    min-height: 420px;     /* maintain structure */
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .testmonials-container {
+    padding: 10px 20px;
+  }
+
+  .testmonials-heading h2 {
+    font-size: 28px;
+  }
+
+  .testmonials-cards {
+    flex-direction: column;   /* stack cards */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .testmonial-card {
+    width: 100%;
+    max-width: 400px;
+    min-height: 380px;
+  }
+
+  .testmonial-card p {
+    font-size: 13px;
+  }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
+  .testmonials-heading h2 {
+    font-size: 24px;
+  }
+
+  .testmonial-card {
+    padding: 20px;
+  }
+}
+
+

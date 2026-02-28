@@ -16,7 +16,7 @@ const Section3 = () => {
   let startX = 0;
   let startScrollLeft = 0;
 
-  const onMouseDown = (e) => {
+  const onMouseDown = (e) => {  
     e.preventDefault();
     isDragging = true;
     startX = e.pageX;
@@ -35,7 +35,7 @@ const Section3 = () => {
   };
 
   return (
-    <section className="section3">
+    <section className="section3" id="services">
 
       <div className="top-heading">
         <span className="dot"></span>
@@ -110,7 +110,7 @@ const Section3 = () => {
 
       {/* ================= MENTOR SECTION ================= */}
 
-<div className="mentor-section">
+<div className="mentor-section" id="mentorr">
 
   {/* LEFT CONTENT */}
   <div className="mentor-left">
@@ -162,6 +162,68 @@ const Section3 = () => {
   </div>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+{/*     skyrocket-section      */}
+
+
+
+
+
+ <section className="skyrocket-section">
+      <div className="skyrocket-container">
+
+        {/* LEFT CONTENT */}
+        <div className="skyrocket-content">
+          
+          <div className="skyrocket-heading">
+            <span className="skyrocket-dot"></span>
+            <h2 className="skyrocket-title">
+              Skyrocket to Success
+            </h2>
+          </div>
+
+          <p className="skyrocket-description">
+            Beyond personalized mentoring, we offer periodic training and
+            knowledge-sharing sessions led by industry experts. These sessions
+            are designed to equip students and young professionals with
+            practical, industry-relevant skills.
+          </p>
+
+          <p className="skyrocket-tagline">
+            Skill up, Link up, and Rise up
+          </p>
+
+          <button className="skyrocket-button">
+            Get Started →
+          </button>
+
+        </div>
+
+        {/* RIGHT IMAGE */}
+        <div className="skyrocket-image-wrapper">
+          <img
+            src={client}
+            alt="Mentorship discussion"
+            className="skyrocket-image"
+          />
+        </div>
+
+      </div>
+
+      {/* Background Circle */}
+      <div className="skyrocket-bg-shape"></div>
+    </section>
 
     </section>
   );
