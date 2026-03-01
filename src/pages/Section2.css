@@ -311,6 +311,10 @@ html, body {
     font-size:22px;
   }
 
+  .dot {
+    display: none;
+  }
+
   .highlight-text {
     font-size:18px;
   }

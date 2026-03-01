@@ -170,6 +170,10 @@
     font-size: 24px;
   }
 
+  .red-dot {
+    display: none;
+  }
+
   .testmonial-card {
     padding: 20px;
   }

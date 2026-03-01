@@ -24,32 +24,33 @@ import CareerBG from "../assets/CareerBG.webp";
 /* --- Background Image (if using) --- */
 import bgImage from "../assets/hero-section-bg-nav.webp";
 
+/* Slide Data */
+const slides = [
+  {
+    title: "Customized Mentorship",
+    person: mentorPerson,
+    bg: mentorBg,
+  },
+  {
+    title: "Power Skills Development",
+    person: powerskillperson,
+    bg: powerskillbg,
+  },
+
+  {
+
+    title: "Professional readiness training",
+    person: Professionalpreson,
+    bg: ProfessionalB,
+  },
+  {
+    title: "Career confidence & communication",
+    person: Careerpreson,
+    bg: CareerBG,
+  }
+];
+
 const Herosection = () => {
-  /* Slide Data */
-  const slides = [
-    {
-      title: "Customized Mentorship",
-      person: mentorPerson,
-      bg: mentorBg,
-    },
-    {
-      title: "Power Skills Development",
-      person: powerskillperson,
-      bg: powerskillbg,
-    },
-
-    {
-
-      title: "Professional readiness training",
-      person: Professionalpreson,
-      bg: ProfessionalB,
-    },
-    {
-      title: "Career confidence & communication",
-      person: Careerpreson,
-      bg: CareerBG,
-    }
-  ];
 
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
@@ -72,6 +73,7 @@ const Herosection = () => {
   return (
     <section
       className="hero"
+      id="home"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="hero-container">
