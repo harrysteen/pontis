@@ -7,6 +7,8 @@ import demo3 from "../assets/resume.png";
 import demo4 from "../assets/linkedin.png";
 import client from "../assets/client.jpg";
 
+import skyrocketImg from "../assets/Skyrocket-img.png";
+
 const Section3 = () => {
 
   /* ⭐ ADD THIS */
@@ -36,6 +38,8 @@ const Section3 = () => {
 
   return (
     <section className="section3" id="services">
+
+      <div className="child-1">
 
       <div className="top-heading">
         <span className="dot"></span>
@@ -110,7 +114,9 @@ const Section3 = () => {
 
       {/* ================= MENTOR SECTION ================= */}
 
-<div className="mentor-section" id="mentorr">
+        <div className="mentor-container">
+
+      <div className="mentor-section" id="mentorr">
 
   {/* LEFT CONTENT */}
   <div className="mentor-left">
@@ -161,13 +167,13 @@ const Section3 = () => {
     </div>
   </div>
 
+   </div>
+
+
 </div>
 
-
-
-
-
-
+ 
+      </div>
 
 
 
@@ -181,30 +187,31 @@ const Section3 = () => {
 
 
  <section className="skyrocket-section">
-      <div className="skyrocket-container">
+      {/* heading sits above columns, padding maintained by section */}
+      <div className="skyrocket-heading">
+        <span className="skyrocket-dot"></span>
+        <h2 className="skyrocket-title">Skyrocket to Success</h2>
+      </div>
 
+      <div className="skyrocket-container">
+  
         {/* LEFT CONTENT */}
         <div className="skyrocket-content">
           
-          <div className="skyrocket-heading">
-            <span className="skyrocket-dot"></span>
-            <h2 className="skyrocket-title">
-              Skyrocket to Success
-            </h2>
-          </div>
-
           <p className="skyrocket-description">
-            Beyond personalized mentoring, we offer periodic training and
-            knowledge-sharing sessions led by industry experts. These sessions
-            are designed to equip students and young professionals with
-            practical, industry-relevant skills.
+        Beyond personalized mentoring, we offer periodic training and knowledge-sharing 
+        
+        
+        sessions led by industry experts. These sessions are designed to equip students and
+         young 
+        professionals with practical, industry-relevant skills.
           </p>
 
           <p className="skyrocket-tagline">
             Skill up, Link up, and Rise up
           </p>
 
-          <button className="skyrocket-button">
+          <button className="get-started">
             Get Started →
           </button>
 
@@ -213,7 +220,7 @@ const Section3 = () => {
         {/* RIGHT IMAGE */}
         <div className="skyrocket-image-wrapper">
           <img
-            src={client}
+            src={skyrocketImg}
             alt="Mentorship discussion"
             className="skyrocket-image"
           />

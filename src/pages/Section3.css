@@ -1,13 +1,22 @@
-.section3{
-      padding: 10px 80px;
+/* ================= GLOBAL SECTION ================= */
+
+.section3 {
   background: #f4f6f9;
   position: relative;
- 
+  width: 100%;
+  overflow: hidden;
 }
 
- 
+.child-1 {
+  padding: 120px 80px;
 
-/* Heading */
+  background: url("../assets/mentor-bg.jpg") no-repeat center center;
+  background-size: cover;
+
+  width: 100%;
+  min-height: 100vh;     /* 🔥 important for big screens */
+}
+/* ================= TOP HEADING ================= */
 
 .top-heading {
   display: flex;
@@ -35,8 +44,7 @@
   color: transparent;
 }
 
-
-/* Slider Container */
+/* ================= CARD SLIDER ================= */
 
 .card-slider {
   display: flex;
@@ -51,37 +59,16 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  
-}
-.card h3{
-     
-    text-align: center;
-}
-
- 
-/* Card */
-
-.card {
   min-width: 413px;
   height: 510px;
   background: #ffffff;
-  
   border-radius: 20px;
   padding: 30px;
- 
-  position: relative;
-  transition: all 0.35s ease;
-  z-index: 1;
- 
- 
- 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.35s ease;
 }
-
-/* Image */
 
 .card img {
   width: 80px;
@@ -90,128 +77,49 @@
   margin-bottom: 20px;
 }
 
-/* Title */
-
 .card h3 {
   font-family: "Mada", sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 15px;
+  text-align: center;
 }
-
-/* Description */
 
 .card p {
   font-family: "Mada", sans-serif;
   font-size: 18px;
-  color: #000000;
   line-height: 1.6;
-  font-weight: 500;
+  text-align: center;
 }
 
-
-.card {
-  position: relative;
-  z-index: 1;
-  transition: all 0.35s ease;
-}
 .card:hover {
- 
-
   box-shadow:
     0 20px 40px rgba(63,81,255,0.25),
     0 30px 60px rgba(255,30,90,0.25);
 }
 
-/* Gradient Hover Effect */
- 
-
- 
-
-
-/* Responsive */
-
-@media (max-width: 992px) {
-  .section3 {
-    padding: 80px 40px;
-  }
-}
-
-@media (max-width: 576px) {
-  .section3 {
-    padding: 60px 20px;
-  }
-
-  .card {
-    min-width: 260px;
-  }
-
-  .top-heading h5 {
-    font-size: 22px;
-  }
-
-  .dot {
-    display: none;
-  }
-}
-
-
-@media (max-width: 576px) {
-
-  .card {
-    min-width: 85%;
-    height: auto;
-  }
-
-}
-
-
-
- 
-
-
-
-
-
-
-
-
-
 /* ================= MENTOR SECTION ================= */
 
 .mentor-section {
-  margin-top: 120px;
   display: flex;
   justify-content: space-between;
-  gap: 60px;
   align-items: center;
+  gap: 60px;
+  margin-top: 120px;
 }
 
-/* LEFT */
-
-.mentor-left {
+.mentor-left,
+.mentor-right {
   flex: 1;
 }
 
-.mentor-left h2{
+.mentor-left h2 {
   font-family: "Mada", sans-serif;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
-.mentor-left h5{
-  font-family: "Mada", sans-serif;
-  font-size: 14px;
-   background: linear-gradient(90deg,#3f51ff,#ff1e5a);
-  -webkit-background-clip: text;
-  color: transparent;
- 
-   
-}
-
- 
 .gradient-name {
-
   background: linear-gradient(90deg,#3f51ff,#ff1e5a);
   -webkit-background-clip: text;
   color: transparent;
@@ -220,25 +128,23 @@
 .mentor-role {
   font-size: 16px;
   margin-bottom: 20px;
-  color: #555;
+  background: linear-gradient(90deg,#3f51ff,#ff1e5a);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.mentor-left p {
-      font-family: "Mada", sans-serif;
+.mentor-left p,
+.mentor-right p {
+  font-family: "Mada", sans-serif;
   font-size: 18px;
   line-height: 1.7;
   margin-bottom: 15px;
   color: #000000B2;
 }
- 
-/* CENTER IMAGE */
 
 .mentor-image {
-  
   flex: 1;
   text-align: center;
-  position: relative;
- 
 }
 
 .mentor-image img {
@@ -252,23 +158,14 @@
 .mentor-btn {
   width: 354px;
   height: 42px;
-
   margin-top: 20px;
   background: #E40209;
   color: #ffffff;
   border: none;
   border-radius: 8px;
-
-  /* ⭐ Typography */
   font-family: "Urbanist", sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 1;        /* line-height: 100% */
-  letter-spacing: 0;
-
- 
- 
-
+  font-size: 18px;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -277,245 +174,78 @@
   background: #c40000;
 }
 
-/* RIGHT */
-
-.mentor-right {
-  flex: 1;
-}
-
-.mentor-right h4 {
-  font-family: "Mada", sans-serif;
-  font-size: 24px;
-  margin-bottom: 15px;
-
- 
-}
-
-.mentor-right p {
-      font-family: "Mada", sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #000000B2;
-}
-
 .mentor-stats h3 {
   font-family: "Mada", sans-serif;
   font-size: 22px;
-
-  /* ⭐ Gradient text */
-  background: linear-gradient(90deg, #3f51ff, #ff1e5a);
+  background: linear-gradient(90deg,#3f51ff,#ff1e5a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   margin-top: 15px;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 992px) {
-
-  .mentor-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .mentor-left,
-  .mentor-right {
-    text-align: center;
-  }
-
-}
-
-
-@media (min-width: 1400px) {
-
-  .mentor-section {
-    max-width: 1400px;
-    margin: 120px auto 0 auto;
-  }
-
-}
-
-
-@media (max-width: 1200px) {
-
-  .section3 {
-    padding: 40px 60px;
-  }
-
-  .mentor-section {
-    gap: 40px;
-  }
-
-}
-
-
-@media (max-width: 992px) {
-
-  .mentor-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .mentor-left,
-  .mentor-right {
-    max-width: 600px;
-  }
-
-  .mentor-image {
-    order: -1; /* ⭐ image moves top like modern layouts */
-  }
-
-  .mentor-btn {
-    width: 100%;
-    max-width: 354px;
-  }
-
-}
-
-
-
-@media (max-width: 576px) {
-
-  .section3 {
-    padding: 30px 20px;
-  }
-
-  .top-heading h5 {
-    font-size: 22px;
-  }
-
-  .mentor-left h2 {
-    font-size: 26px;
-  }
-
-  .mentor-right h4 {
-    font-size: 20px;
-  }
-
-  .mentor-left p,
-  .mentor-right p {
-    font-size: 16px;
-  }
-
-  .mentor-image img {
-    max-width: 280px;
-  }
-
-  .mentor-btn {
-    width: 100%;
-    height: 48px;
-    font-size: 18px;
-  }
-
-  .card {
-    min-width: 260px;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*        skyrocket-section         */
-
-
-
-
+/* ================= SKYROCKET SECTION ================= */
 
 .skyrocket-section {
   position: relative;
- 
-  padding: 100px 0;
- 
-}
-
-.skyrocket-container {
-  max-width: 1200px;
- 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
-}
-
-/* LEFT SIDE */
-.skyrocket-content {
-  flex: 1;
+  padding: 120px 80px;
+  background: url("../assets/Skyrocket-bg.jpg") center/cover no-repeat;
+  width: 100%;
 }
 
 .skyrocket-heading {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-    font-family: "Mada", sans-serif;
+  position: relative;
+  margin-bottom: 40px;
+  font-family: "Mada", sans-serif;
 }
 
 .skyrocket-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #e50914;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
+  background: linear-gradient(90deg,#3f51ff,#ff1e5a);
 }
 
 .skyrocket-title {
   font-size: 36px;
   font-weight: 600;
-  margin: 0;
-  color: #111;
+  color: #000000E5;
+}
+
+.skyrocket-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.skyrocket-content {
+  flex: 1;
 }
 
 .skyrocket-description {
-  font-size: 15px;
+  font-family: "Mada", sans-serif;
+  font-size: 18px;
   line-height: 1.8;
-  color: #5f6b7a;
+  color: #737373;
   max-width: 520px;
   margin-bottom: 20px;
 }
 
 .skyrocket-tagline {
-  font-size: 16px;
-  font-weight: 500;
-  color: #6c4cff;
+  font-family: "Mada", sans-serif;
+  font-size: 24px;
+  background: linear-gradient(90deg,#182CCB,#7E176A,#E40209);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 25px;
 }
 
-.skyrocket-button {
-  background-color: #e50914;
-  color: #fff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 14px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.skyrocket-button:hover {
-  background-color: #c40811;
-}
-
-/* RIGHT SIDE */
 .skyrocket-image-wrapper {
   flex: 1;
   display: flex;
@@ -524,37 +254,82 @@
 
 .skyrocket-image {
   width: 100%;
-  max-width: 520px;
+  max-width: 626px;
+  height: auto;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  object-fit: cover;
 }
 
-/* BACKGROUND SHAPE */
-.skyrocket-bg-shape {
-  position: absolute;
-  bottom: -180px;
-  left: -180px;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, #ff8c9a, transparent 70%);
-  border-radius: 50%;
-  opacity: 0.4;
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .child-1 {
+    padding: 100px 60px;
+  }
+
+  .card {
+    min-width: 340px;
+  }
+
+  .skyrocket-container {
+    gap: 60px;
+  }
 }
 
-/* RESPONSIVE */
 @media (max-width: 992px) {
+
+  .mentor-section,
   .skyrocket-container {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
+  }
+
+  .mentor-btn {
+    width: 100%;
+    max-width: 354px;
   }
 
   .skyrocket-description {
     margin: 0 auto 20px auto;
   }
-
-  .skyrocket-image {
-    max-width: 100%;
-  }
 }
 
+@media (max-width: 576px) {
 
+  .child-1 {
+    padding: 60px 20px;
+  }
+
+  .skyrocket-section {
+    padding: 80px 20px;
+  }
+
+  .top-heading h5 {
+    font-size: 20px;
+  }
+
+  .card {
+    min-width: 85%;
+    height: auto;
+  }
+
+  .mentor-left h2 {
+    font-size: 24px;
+  }
+
+  .mentor-left p,
+  .mentor-right p,
+  .skyrocket-description {
+    font-size: 15px;
+  }
+
+  .skyrocket-title {
+    font-size: 26px;
+  }
+
+  .skyrocket-dot {
+    display: none;
+  }
+}
